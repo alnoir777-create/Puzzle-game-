@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0f172a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Bloc Puzzle</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="hud">
+    <div class="card grow"><small>Score</small><b id="score">0</b></div>
+    <div class="card"><small>Record</small><b id="best">0</b></div>
+    <canvas id="next" aria-label="Pièce suivante"></canvas>
+    <div class="side">
+      <button id="pauseBtn" class="mini" type="button" hidden>Pause</button>
+      <button id="restartBtn" class="mini" type="button" hidden>Rejouer</button>
+    </div>
+  </header>
+  <main class="stage" id="stage">
+    <canvas id="board" aria-label="Plateau de jeu"></canvas>
+    <div id="overlay" class="overlay">
+      <div class="ocard">
+        <img id="ologo" class="ologo" src="logo.svg" alt="Logo Bloc Puzzle" width="104" height="104">
+        <h2 id="otitle">Bloc Puzzle</h2>
+        <p id="otext"></p>
+        <button id="go" type="button">Jouer</button>
+      </div>
+    </div>
+  </main>
+  <div class="pad" aria-label="Contrôles tactiles">
+    <div class="grp">
+      <button class="btn" data-a="left" aria-label="Gauche">◀</button>
+      <button class="btn" data-a="down" aria-label="Descendre">▼</button>
+      <button class="btn" data-a="right" aria-label="Droite">▶</button>
+    </div>
+    <div class="grp">
+      <button class="btn rot" data-a="rotateL" aria-label="Rotation à gauche">⟲</button>
+      <button class="btn rot" data-a="rotate" aria-label="Rotation à droite">⟳</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
